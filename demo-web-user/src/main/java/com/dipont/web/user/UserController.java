@@ -26,14 +26,14 @@ public class UserController extends BaseController{
     
     @GetMapping(value="/users/{state}")
     public ResultDTO<UserBO> getUsersByState(@PathVariable("state") int state) throws Exception{
-        try {
-            List<UserBO> users = userService.getUsers(state);
-            return new ResultDTO(users);
-        } catch (Exception ex) {
-            return handleException(ex);
-        }
-//        List<UserBO> users = userService.getUsers(state);
-//        return new ResultDTO(users);
+//        try {
+//            List<UserBO> users = userService.getUsers(state);
+//            return new ResultDTO(users);
+//        } catch (Exception ex) {
+//            return handleException(ex);
+//        }
+        List<UserBO> users = userService.getUsers(state);
+        return new ResultDTO(users);
     }
     
 }
