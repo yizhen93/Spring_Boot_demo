@@ -13,7 +13,7 @@ import com.dipont.common.exception.BaseException;
 import com.dipont.web.core.ResultDTO;
 
 @Order(1)
-@WebFilter(filterName = "commonFilter", urlPatterns = "/*")
+@WebFilter(filterName = "baseHandleExceptionFilter", urlPatterns = "/*")
 public class BaseHandleExceptionFilter implements Filter {
     
     @Override
