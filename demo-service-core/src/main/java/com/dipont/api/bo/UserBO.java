@@ -1,0 +1,28 @@
+package com.dipont.api.bo;
+
+public class UserBO {
+
+    private long id;
+    private String userName;
+    private int state;
+    
+    public long getId() {
+        return id;
+    }
+    public void setId(long id) {
+        this.id = id;
+    }
+    public String getUserNamee() {
+        return userName;
+    }
+    public void setUserName(String name) {
+        this.userName = name;
+    }
+    public int getState() {
+        return state;
+    }
+    public void setState(int state) {
+        this.state = state;
+    }
+    
+}
