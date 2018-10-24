@@ -3,6 +3,7 @@ package com.dipont.service.user.service.impl;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,7 +25,12 @@ public class UserServiceImpl implements UserService {
         if (userEntities == null || userEntities.size() == 0) {
             throw new NotContentException();
         }
-        List<UserBO> userBos = translateUserEntitiesToUserBo(userEntities);
+        List<UserBO> userBos = new ArrayList();//translateUserEntitiesToUserBo(userEntities);
+        userEntities.forEach(mapper -> {
+        		UserBO userBo = new UserBO();
+        		BeanUtils.copyProperties(mapper, userBo);
+        		userBos.add(userBo);
+        	});
         return userBos;
     }
 
