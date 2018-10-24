@@ -1,7 +1,9 @@
 package com.dipont.common.exception;
 
 public class BaseException extends Exception{
-    protected String errorCode = "";
+	private static final long serialVersionUID = 8456966172362293636L;
+	
+	protected String errorCode = "";
     protected String errorMessage = "";
     
     public String getErrorCode() {

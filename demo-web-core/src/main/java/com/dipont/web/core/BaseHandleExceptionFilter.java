@@ -13,7 +13,8 @@ import com.dipont.common.exception.BaseException;
 @Order(1)
 @WebFilter(filterName = "baseHandleExceptionFilter", urlPatterns = "/*")
 public class BaseHandleExceptionFilter implements Filter {
-    
+    private static String ENCODE_MODE = "application/json;charset=utf-8";
+	
     @Override
     public void init(FilterConfig filterConfig) throws ServletException{
         
@@ -23,6 +24,7 @@ public class BaseHandleExceptionFilter implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException {
         try {
+        	response.setContentType(ENCODE_MODE);
             chain.doFilter(request, response);
         } catch (Exception ex) {
             ServletOutputStream out = response.getOutputStream();

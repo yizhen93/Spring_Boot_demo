@@ -1,9 +1,11 @@
 package com.dipont.web.core;
 
+import com.dipont.common.exception.BaseExceptionEnum;
+
 public class AbnormalResultDTO extends ResultDTO{
 	public AbnormalResultDTO() {
-		this.code = "500";
-		this.message = "抱歉，内部异常，请稍后再试!";
+		this.code = BaseExceptionEnum.CODE_500.getErrorCode();
+		this.message = BaseExceptionEnum.CODE_500.getErrorMessage();
 	}
 	
 	public AbnormalResultDTO(String code, String message) {

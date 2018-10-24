@@ -25,7 +25,7 @@ public class UserServiceImpl implements UserService {
         if (userEntities == null || userEntities.size() == 0) {
             throw new NotContentException();
         }
-        List<UserBO> userBos = new ArrayList<>();//translateUserEntitiesToUserBo(userEntities);
+        List<UserBO> userBos = new ArrayList<>();
         userEntities.forEach(mapper -> {
         		UserBO userBo = new UserBO();
         		BeanUtils.copyProperties(mapper, userBo);
