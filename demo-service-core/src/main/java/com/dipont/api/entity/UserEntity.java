@@ -24,7 +24,7 @@ public class UserEntity{
     public void setId(long id) {
         this.id = id;
     }
-    @Column(name = "userName")
+    @Column(name = "user_name")
     public String getUserName() {
         return userName;
     }
@@ -38,10 +38,6 @@ public class UserEntity{
     public void setState(int state) {
         this.state = state;
     }
-    
-    public UserEntity() {
-		// TODO Auto-generated constructor stub
-	}
     
 	@Override
 	public String toString() {

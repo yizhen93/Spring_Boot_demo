@@ -1,7 +1,6 @@
-package com.dipont.api.bo;
+package com.dipont.web.user.response;
 
-public class UserBO {
-
+public class UserDetailReponse {
     private long id;
     private String userName;
     private int state;

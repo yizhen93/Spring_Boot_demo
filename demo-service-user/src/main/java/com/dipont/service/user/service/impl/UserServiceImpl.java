@@ -21,11 +21,11 @@ public class UserServiceImpl implements UserService {
     
     @Override
     public List<UserBO> getUsers(int state) throws NotContentException {
-        List<UserEntity> userEntities = userDao.findAll();
+        List<UserEntity> userEntities = userDao.findByState(state);
         if (userEntities == null || userEntities.size() == 0) {
             throw new NotContentException();
         }
-        List<UserBO> userBos = new ArrayList();//translateUserEntitiesToUserBo(userEntities);
+        List<UserBO> userBos = new ArrayList<>();//translateUserEntitiesToUserBo(userEntities);
         userEntities.forEach(mapper -> {
         		UserBO userBo = new UserBO();
         		BeanUtils.copyProperties(mapper, userBo);
@@ -34,17 +34,4 @@ public class UserServiceImpl implements UserService {
         return userBos;
     }
 
-    private List<UserBO> translateUserEntitiesToUserBo(List<UserEntity> userEntities) {
-        List<UserBO> userBos = new ArrayList();
-        if (userEntities != null && !userEntities.isEmpty()) {
-            for (UserEntity userEntity : userEntities) {
-                UserBO userBo = new UserBO();
-                userBo.setId(userEntity.getId());
-                userBo.setUserName(userEntity.getUserName());
-                userBo.setState(userEntity.getState());
-                userBos.add(userBo);
-            }
-        }
-        return userBos;
-    }
 }
