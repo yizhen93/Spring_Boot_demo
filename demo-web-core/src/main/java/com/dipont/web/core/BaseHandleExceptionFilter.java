@@ -24,18 +24,18 @@ public class BaseHandleExceptionFilter implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException {
-        try {
+//        try {
             chain.doFilter(request, response);
-        } catch (Exception ex) {
-            ServletOutputStream out = response.getOutputStream();
-            if (ex.getCause() instanceof BaseException) {
-                ResultDTO result = new ResultDTO(((BaseException)ex.getCause()).getErrorCode(), ((BaseException)ex.getCause()).getErrorMessage());
-                out.write(JSON.toJSONString(result, SerializerFeature.WriteMapNullValue).getBytes());
-            } else {
-                out.write(JSON.toJSONString(new ResultDTO("500", "Inner Exception!")).getBytes());
-            }
-            out.flush();
-        }
+//        } catch (Exception ex) {
+//            ServletOutputStream out = response.getOutputStream();
+//            if (ex.getCause() instanceof BaseException) {
+//                ResultDTO result = new ResultDTO(((BaseException)ex.getCause()).getErrorCode(), ((BaseException)ex.getCause()).getErrorMessage());
+//                out.write(JSON.toJSONString(result, SerializerFeature.WriteMapNullValue).getBytes());
+//            } else {
+//                out.write(JSON.toJSONString(new ResultDTO("500", "Inner Exception!")).getBytes());
+//            }
+//            out.flush();
+//        }
     }
 
     @Override

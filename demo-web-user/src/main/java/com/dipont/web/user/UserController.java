@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.dipont.api.bo.UserBO;
-import com.dipont.common.exception.NotContentException;
 import com.dipont.service.user.service.UserService;
 import com.dipont.web.core.BaseController;
 import com.dipont.web.core.ResultDTO;

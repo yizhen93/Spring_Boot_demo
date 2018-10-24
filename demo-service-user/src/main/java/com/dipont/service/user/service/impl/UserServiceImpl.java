@@ -21,7 +21,7 @@ public class UserServiceImpl implements UserService {
     
     @Override
     public List<UserBO> getUsers(int state) throws NotContentException {
-        List<UserEntity> userEntities = userDao.selectUserByState(state);
+        List<UserEntity> userEntities = userDao.findAll();
         if (userEntities == null || userEntities.size() == 0) {
             throw new NotContentException();
         }

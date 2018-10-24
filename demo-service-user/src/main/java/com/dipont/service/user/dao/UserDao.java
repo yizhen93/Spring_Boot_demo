@@ -2,13 +2,12 @@ package com.dipont.service.user.dao;
 
 import java.util.List;
 
-import org.apache.ibatis.annotations.Select;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.dipont.api.entity.UserEntity;
-import com.dipont.service.dao.BaseDao;
 
-public interface UserDao extends BaseDao<UserEntity> {
+public interface UserDao extends JpaRepository<UserEntity, Long> {
+
+	List<UserEntity> findByState(int state);
     
-    @Select("select * from user where state = #{state}")
-    public List<UserEntity> selectUserByState(int state);
 }
