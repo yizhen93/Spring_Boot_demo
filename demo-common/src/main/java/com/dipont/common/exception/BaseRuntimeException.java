@@ -1,6 +1,6 @@
 package com.dipont.common.exception;
 
-public class BaseException extends Exception{
+public class BaseRuntimeException extends RuntimeException{
 	private static final long serialVersionUID = 8456966172362293636L;
 	
 	protected String errorCode = "";
@@ -14,7 +14,7 @@ public class BaseException extends Exception{
         return this.errorMessage;
     }
 
-    public BaseException add(BaseExceptionEnum data) {
+    public BaseRuntimeException add(BaseExceptionEnum data) {
         this.errorCode = data.getErrorCode();
         this.errorMessage = data.getErrorMessage();
         return this;

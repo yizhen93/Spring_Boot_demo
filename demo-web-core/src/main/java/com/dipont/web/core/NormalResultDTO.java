@@ -7,18 +7,18 @@ public class NormalResultDTO<T> extends ResultDTO{
         return result;
     }
     public NormalResultDTO(T data) {
-        this.code = "200";
+        this.status = "200";
         this.message = "Ok";
         this.result = data;
     }
     
-    public NormalResultDTO(String code, String message) {
-        this.code = code;
+    public NormalResultDTO(String status, String message) {
+        this.status = status;
         this.message = message;
     }
     
-    public NormalResultDTO(String code, String message, T data) {
-        this.code = code;
+    public NormalResultDTO(String status, String message, T data) {
+        this.status = status;
         this.message = message;
         this.result = data;
     }

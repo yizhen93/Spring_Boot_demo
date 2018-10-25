@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.core.annotation.Order;
 
 import com.alibaba.fastjson.JSON;
-import com.dipont.common.exception.BaseException;
+import com.dipont.common.exception.BaseRuntimeException;
 
 
 @Order(1)
@@ -28,21 +28,27 @@ public class BaseHandleExceptionFilter implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException {
+    	ServletOutputStream out = response.getOutputStream();
+    	ResultDTO result = null;
+    	
+    	response.setContentType(ENCODE_MODE);
         try {
-        	response.setContentType(ENCODE_MODE);
             chain.doFilter(request, response);
+        } catch (BaseRuntimeException ex) {
+        	logger.error(ex.getErrorCode(), ex.getMessage(), ex);
+            result = new AbnormalResultDTO(((BaseRuntimeException)ex.getCause()).getErrorCode(), ((BaseRuntimeException)ex.getCause()).getErrorMessage());
+        } catch (RuntimeException ex) {
+        	logger.error(ex.getMessage(), ex);
+        	result = new AbnormalResultDTO();
         } catch (Exception ex) {
-            ServletOutputStream out = response.getOutputStream();
-            if (ex.getCause() instanceof BaseException) {
-            	logger.error(ex.getMessage());
-                ResultDTO result = new AbnormalResultDTO(((BaseException)ex.getCause()).getErrorCode(), ((BaseException)ex.getCause()).getErrorMessage());
-                out.write(JSON.toJSONString(result).getBytes());
-            } else {
-            	logger.error(ex.getMessage());
-                out.write(JSON.toJSONString(new AbnormalResultDTO()).getBytes());
-            }
-            out.flush();
-        }
+        	logger.error(ex.getMessage(), ex);
+        	result = new AbnormalResultDTO();
+        } finally {
+			if (result != null) {
+	            out.write(JSON.toJSONString(result).getBytes());
+	            out.flush();
+			}
+		}
     }
 
     @Override

@@ -31,14 +31,16 @@ public class UserController extends BaseController{
     }
     
     @GetMapping(value="/state/{state}")
-    public ResultDTO getUsersByState(@PathVariable("state") int state) throws Exception{
+    public ResultDTO getUsersByState(@PathVariable("state") int state){
     	List<UserDetailReponse> users = new ArrayList<>();
         List<UserBO> userBos = userService.getUsers(state);
-        userBos.forEach((userBo) -> {
-        	UserDetailReponse user = new UserDetailReponse();
-        	BeanUtils.copyProperties(userBo, user);
-        	users.add(user);
-        });
+        if (userBos.size() > 0) {
+        	userBos.forEach((userBo) -> {
+        		UserDetailReponse user = new UserDetailReponse();
+        		BeanUtils.copyProperties(userBo, user);
+        		users.add(user);
+        	});
+        }
         return new NormalResultDTO<List<UserDetailReponse>>(users);
     }
     
