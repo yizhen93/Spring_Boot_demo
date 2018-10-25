@@ -7,6 +7,8 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,6 +17,7 @@ import com.dipont.service.user.service.UserService;
 import com.dipont.web.core.BaseController;
 import com.dipont.web.core.NormalResultDTO;
 import com.dipont.web.core.ResultDTO;
+import com.dipont.web.user.request.UserRequest;
 import com.dipont.web.user.response.UserDetailReponse;
 
 
@@ -42,6 +45,12 @@ public class UserController extends BaseController{
         	});
         }
         return new NormalResultDTO<List<UserDetailReponse>>(users);
+    }
+    
+    @PostMapping
+    public int addUser(@RequestBody UserRequest user) {
+    	 
+    	return 1;
     }
     
     @GetMapping(value="/redis")

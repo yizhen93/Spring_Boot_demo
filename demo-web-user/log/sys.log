@@ -1448,3 +1448,10 @@ Caused by: java.lang.Error: Unresolved compilation problems:
 2018-10-25 17:34:17,528 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.6.RELEASE, Spring v5.0.10.RELEASE
 2018-10-25 17:34:17,530 INFO (SpringApplication.java:654)- No active profile set, falling back to default profiles: default
 2018-10-25 17:34:26,589 INFO (StartupInfoLogger.java:59)- Started DemoWebUserApplication in 9.743 seconds (JVM running for 10.621)
+2018-10-25 17:43:23,791 INFO (StartupInfoLogger.java:50)- Starting DemoWebUserApplication on liyizheng with PID 62320 (D:\GitHub\Spring_Boot_demo\demo-web-user\target\classes started by liyizhen in D:\GitHub\Spring_Boot_demo\demo-web-user)
+2018-10-25 17:43:23,796 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.6.RELEASE, Spring v5.0.10.RELEASE
+2018-10-25 17:43:23,799 INFO (SpringApplication.java:654)- No active profile set, falling back to default profiles: default
+2018-10-25 17:44:12,369 INFO (StartupInfoLogger.java:50)- Starting DemoWebUserApplication on liyizheng with PID 42804 (D:\GitHub\Spring_Boot_demo\demo-web-user\target\classes started by liyizhen in D:\GitHub\Spring_Boot_demo\demo-web-user)
+2018-10-25 17:44:12,379 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.6.RELEASE, Spring v5.0.10.RELEASE
+2018-10-25 17:44:12,385 INFO (SpringApplication.java:654)- No active profile set, falling back to default profiles: default
+2018-10-25 17:44:25,548 INFO (StartupInfoLogger.java:59)- Started DemoWebUserApplication in 14.344 seconds (JVM running for 15.549)
