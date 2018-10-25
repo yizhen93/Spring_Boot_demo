@@ -1,6 +1,42 @@
-2018-10-22 16:50:01,258 INFO (StartupInfoLogger.java:50)- Starting DemoWebUserApplication on liyizheng with PID 12864 (D:\Java\Eclipse_WorkSpace\demo-web-user\target\classes started by liyizhen in D:\Java\Eclipse_WorkSpace\demo-web-user)
-2018-10-22 16:50:01,261 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.6.RELEASE, Spring v5.0.10.RELEASE
-2018-10-22 16:50:01,262 INFO (SpringApplication.java:654)- No active profile set, falling back to default profiles: default
-2018-10-22 16:51:10,560 INFO (StartupInfoLogger.java:50)- Starting DemoWebUserApplication on liyizheng with PID 11772 (D:\Java\Eclipse_WorkSpace\demo-web-user\target\classes started by liyizhen in D:\Java\Eclipse_WorkSpace\demo-web-user)
-2018-10-22 16:51:10,565 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.6.RELEASE, Spring v5.0.10.RELEASE
-2018-10-22 16:51:10,573 INFO (SpringApplication.java:654)- No active profile set, falling back to default profiles: default
+2018-10-25 09:07:42,971 INFO (StartupInfoLogger.java:50)- Starting DemoWebUserApplication on liyizheng with PID 24272 (D:\GitHub\Spring_Boot_demo\demo-web-user\target\classes started by liyizhen in D:\GitHub\Spring_Boot_demo\demo-web-user)
+2018-10-25 09:07:42,979 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.6.RELEASE, Spring v5.0.10.RELEASE
+2018-10-25 09:07:42,981 INFO (SpringApplication.java:654)- No active profile set, falling back to default profiles: default
+2018-10-25 09:07:48,091 INFO (StartupInfoLogger.java:59)- Started DemoWebUserApplication in 5.537 seconds (JVM running for 6.247)
+2018-10-25 09:12:44,010 INFO (StartupInfoLogger.java:50)- Starting DemoWebUserApplication on liyizheng with PID 20504 (D:\GitHub\Spring_Boot_demo\demo-web-user\target\classes started by liyizhen in D:\GitHub\Spring_Boot_demo\demo-web-user)
+2018-10-25 09:12:44,020 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.6.RELEASE, Spring v5.0.10.RELEASE
+2018-10-25 09:12:44,022 INFO (SpringApplication.java:654)- No active profile set, falling back to default profiles: default
+2018-10-25 09:29:44,487 INFO (StartupInfoLogger.java:50)- Starting DemoWebUserApplication on liyizheng with PID 96632 (D:\GitHub\Spring_Boot_demo\demo-web-user\target\classes started by liyizhen in D:\GitHub\Spring_Boot_demo\demo-web-user)
+2018-10-25 09:29:44,491 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.6.RELEASE, Spring v5.0.10.RELEASE
+2018-10-25 09:29:44,493 INFO (SpringApplication.java:654)- No active profile set, falling back to default profiles: default
+2018-10-25 09:35:09,222 INFO (StartupInfoLogger.java:50)- Starting DemoWebUserApplication on liyizheng with PID 102408 (D:\GitHub\Spring_Boot_demo\demo-web-user\target\classes started by liyizhen in D:\GitHub\Spring_Boot_demo\demo-web-user)
+2018-10-25 09:35:09,228 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.6.RELEASE, Spring v5.0.10.RELEASE
+2018-10-25 09:35:09,230 INFO (SpringApplication.java:654)- No active profile set, falling back to default profiles: default
+2018-10-25 09:56:16,115 INFO (StartupInfoLogger.java:50)- Starting DemoWebUserApplication on liyizheng with PID 73528 (D:\GitHub\Spring_Boot_demo\demo-web-user\target\classes started by liyizhen in D:\GitHub\Spring_Boot_demo\demo-web-user)
+2018-10-25 09:56:16,118 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.6.RELEASE, Spring v5.0.10.RELEASE
+2018-10-25 09:56:16,120 INFO (SpringApplication.java:654)- No active profile set, falling back to default profiles: default
+2018-10-25 10:32:50,669 INFO (StartupInfoLogger.java:50)- Starting DemoWebUserApplication on liyizheng with PID 47756 (D:\GitHub\Spring_Boot_demo\demo-web-user\target\classes started by liyizhen in D:\GitHub\Spring_Boot_demo\demo-web-user)
+2018-10-25 10:32:50,672 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.6.RELEASE, Spring v5.0.10.RELEASE
+2018-10-25 10:32:50,674 INFO (SpringApplication.java:654)- No active profile set, falling back to default profiles: default
+2018-10-25 10:34:44,433 INFO (StartupInfoLogger.java:50)- Starting DemoWebUserApplication on liyizheng with PID 30336 (D:\GitHub\Spring_Boot_demo\demo-web-user\target\classes started by liyizhen in D:\GitHub\Spring_Boot_demo\demo-web-user)
+2018-10-25 10:34:44,436 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.6.RELEASE, Spring v5.0.10.RELEASE
+2018-10-25 10:34:44,438 INFO (SpringApplication.java:654)- No active profile set, falling back to default profiles: default
+2018-10-25 10:49:49,543 INFO (StartupInfoLogger.java:50)- Starting DemoWebUserApplication on liyizheng with PID 83516 (D:\GitHub\Spring_Boot_demo\demo-web-user\target\classes started by liyizhen in D:\GitHub\Spring_Boot_demo\demo-web-user)
+2018-10-25 10:49:49,546 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.6.RELEASE, Spring v5.0.10.RELEASE
+2018-10-25 10:49:49,548 INFO (SpringApplication.java:654)- No active profile set, falling back to default profiles: default
+2018-10-25 10:54:00,567 INFO (StartupInfoLogger.java:50)- Starting DemoWebUserApplication on liyizheng with PID 33640 (D:\GitHub\Spring_Boot_demo\demo-web-user\target\classes started by liyizhen in D:\GitHub\Spring_Boot_demo\demo-web-user)
+2018-10-25 10:54:00,571 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.6.RELEASE, Spring v5.0.10.RELEASE
+2018-10-25 10:54:00,572 INFO (SpringApplication.java:654)- No active profile set, falling back to default profiles: default
+2018-10-25 10:55:21,172 INFO (StartupInfoLogger.java:50)- Starting DemoWebUserApplication on liyizheng with PID 58644 (D:\GitHub\Spring_Boot_demo\demo-web-user\target\classes started by liyizhen in D:\GitHub\Spring_Boot_demo\demo-web-user)
+2018-10-25 10:55:21,177 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.6.RELEASE, Spring v5.0.10.RELEASE
+2018-10-25 10:55:21,180 INFO (SpringApplication.java:654)- No active profile set, falling back to default profiles: default
+2018-10-25 10:58:18,871 INFO (StartupInfoLogger.java:50)- Starting DemoWebUserApplication on liyizheng with PID 12732 (D:\GitHub\Spring_Boot_demo\demo-web-user\target\classes started by liyizhen in D:\GitHub\Spring_Boot_demo\demo-web-user)
+2018-10-25 10:58:18,877 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.6.RELEASE, Spring v5.0.10.RELEASE
+2018-10-25 10:58:18,879 INFO (SpringApplication.java:654)- No active profile set, falling back to default profiles: default
+2018-10-25 11:00:10,696 INFO (StartupInfoLogger.java:50)- Starting DemoWebUserApplication on liyizheng with PID 101148 (D:\GitHub\Spring_Boot_demo\demo-web-user\target\classes started by liyizhen in D:\GitHub\Spring_Boot_demo\demo-web-user)
+2018-10-25 11:00:10,700 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.6.RELEASE, Spring v5.0.10.RELEASE
+2018-10-25 11:00:10,701 INFO (SpringApplication.java:654)- No active profile set, falling back to default profiles: default
+2018-10-25 11:00:40,961 INFO (StartupInfoLogger.java:50)- Starting DemoWebUserApplication on liyizheng with PID 64712 (D:\GitHub\Spring_Boot_demo\demo-web-user\target\classes started by liyizhen in D:\GitHub\Spring_Boot_demo\demo-web-user)
+2018-10-25 11:00:40,964 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.6.RELEASE, Spring v5.0.10.RELEASE
+2018-10-25 11:00:40,966 INFO (SpringApplication.java:654)- No active profile set, falling back to default profiles: default
+2018-10-25 11:00:46,449 INFO (StartupInfoLogger.java:59)- Started DemoWebUserApplication in 5.923 seconds (JVM running for 6.642)
+2018-10-25 11:01:50,736 ERROR (BaseHandleExceptionFilter.java:37)- Request processing failed; nested exception is com.dipont.common.exception.NotContentException

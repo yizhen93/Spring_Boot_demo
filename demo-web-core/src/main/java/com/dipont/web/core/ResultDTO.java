@@ -1,6 +1,6 @@
 package com.dipont.web.core;
 
-public class ResultDTO {
+public abstract class ResultDTO {
 	protected String code = "";
 	protected String message = "";
 
