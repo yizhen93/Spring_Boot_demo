@@ -28,23 +28,21 @@ public class BaseHandleExceptionFilter implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException {
-    	ServletOutputStream out = response.getOutputStream();
     	ResultDTO result = null;
     	
-    	response.setContentType(ENCODE_MODE);
         try {
             chain.doFilter(request, response);
         } catch (BaseRuntimeException ex) {
         	logger.error(ex.getErrorCode(), ex.getMessage(), ex);
             result = new AbnormalResultDTO(((BaseRuntimeException)ex.getCause()).getErrorCode(), ((BaseRuntimeException)ex.getCause()).getErrorMessage());
-        } catch (RuntimeException ex) {
-        	logger.error(ex.getMessage(), ex);
-        	result = new AbnormalResultDTO();
-        } catch (Exception ex) {
+        } catch (RuntimeException | IOException | ServletException ex) {
         	logger.error(ex.getMessage(), ex);
         	result = new AbnormalResultDTO();
         } finally {
 			if (result != null) {
+		    	ServletOutputStream out = response.getOutputStream();
+		    	
+		    	response.setContentType(ENCODE_MODE);
 	            out.write(JSON.toJSONString(result).getBytes());
 	            out.flush();
 			}

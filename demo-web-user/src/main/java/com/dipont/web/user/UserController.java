@@ -44,4 +44,9 @@ public class UserController extends BaseController{
         return new NormalResultDTO<List<UserDetailReponse>>(users);
     }
     
+    @GetMapping(value="/redis")
+    public ResultDTO getRedisName() {
+    	String result = userService.getRedisName();
+    	return new NormalResultDTO<String>(result);
+    }
 }
