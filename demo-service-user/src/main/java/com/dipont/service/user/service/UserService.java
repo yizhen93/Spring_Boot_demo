@@ -7,4 +7,5 @@ import com.dipont.api.bo.UserBO;
 public interface UserService {
     List<UserBO> getUsers(int state);
     String getRedisName();
+    long addUser(UserBO user);
 }

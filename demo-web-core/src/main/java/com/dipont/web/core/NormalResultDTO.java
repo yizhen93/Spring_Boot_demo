@@ -1,5 +1,7 @@
 package com.dipont.web.core;
 
+import com.dipont.common.exception.BaseExceptionEnum;
+
 public class NormalResultDTO<T> extends ResultDTO{
     private T result = null;
     
@@ -15,6 +17,12 @@ public class NormalResultDTO<T> extends ResultDTO{
     public NormalResultDTO(String status, String message) {
         this.status = status;
         this.message = message;
+    }
+    
+    public NormalResultDTO(BaseExceptionEnum baseExceptionEnum, T data) {
+        this.status = baseExceptionEnum.getErrorCode();
+        this.message = baseExceptionEnum.getErrorMessage();
+        this.result = data;
     }
     
     public NormalResultDTO(String status, String message, T data) {

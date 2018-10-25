@@ -32,7 +32,6 @@ public class UserServiceImpl implements UserService {
         		userBos.add(userBo);
         	});
         }
-        
         return userBos;
     }
 
@@ -42,4 +41,10 @@ public class UserServiceImpl implements UserService {
 		return result;
 	}
 
+	@Override
+	public long addUser(UserBO user) {
+		UserEntity userEntity = new UserEntity();
+		BeanUtils.copyProperties(user, userEntity);
+		return userDao.save(userEntity).getId();
+	}
 }

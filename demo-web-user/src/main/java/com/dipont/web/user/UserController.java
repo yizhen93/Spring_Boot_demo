@@ -5,6 +5,9 @@ import java.util.List;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,13 +16,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.dipont.api.bo.UserBO;
+import com.dipont.common.exception.BaseExceptionEnum;
 import com.dipont.service.user.service.UserService;
 import com.dipont.web.core.BaseController;
 import com.dipont.web.core.NormalResultDTO;
 import com.dipont.web.core.ResultDTO;
 import com.dipont.web.user.request.UserRequest;
 import com.dipont.web.user.response.UserDetailReponse;
-
 
 @RestController
 @RequestMapping("users")
@@ -48,9 +51,16 @@ public class UserController extends BaseController{
     }
     
     @PostMapping
-    public int addUser(@RequestBody UserRequest user) {
-    	 
-    	return 1;
+    public ResultDTO addUser(@RequestBody @Validated UserRequest user, BindingResult bindingResult) {
+    	ResultDTO result = null;
+    	if (bindingResult.hasErrors()) {
+    		result = new NormalResultDTO<List<FieldError>>(BaseExceptionEnum.CODE_400, bindingResult.getFieldErrors());
+    	} else {
+        	UserBO userBo = new UserBO();
+        	BeanUtils.copyProperties(user, userBo);
+        	result = new NormalResultDTO<Long>(userService.addUser(userBo));
+    	}
+    	return result;
     }
     
     @GetMapping(value="/redis")
