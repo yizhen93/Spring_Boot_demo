@@ -17,6 +17,7 @@ import java.util.concurrent.TimeUnit;
  * @Created by wangxin43
  */
 @Service
+@SuppressWarnings({"rawtypes", "unchecked"})
 public class RedisService {
 	@Autowired
     private RedisTemplate redisTemplate;
