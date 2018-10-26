@@ -27,7 +27,7 @@
     <dependencies>
         <dependency>
             <groupId>com.dipont.service</groupId>
-            <artifactId>demo-service-core</artifactId>
+            <artifactId>service-core</artifactId>
     		<version>1.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
