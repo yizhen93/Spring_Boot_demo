@@ -1,4 +1,4 @@
-package com.dipont.web.user;
+package com.dipont.web.user.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,13 +24,19 @@ import com.dipont.web.core.ResultDTO;
 import com.dipont.web.user.request.UserRequest;
 import com.dipont.web.user.response.UserDetailReponse;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiOperation;
+
+@Api(value="/users", tags = "用户模块")
 @RestController
-@RequestMapping("users")
+@RequestMapping("/users")
 public class UserController extends BaseController{
     
     @Autowired
     private UserService userService;
     
+    @ApiOperation(value="hello", notes = "测试swagger")
     @GetMapping("/hello")
     public String hello() {
         return "hahaha";
@@ -51,6 +57,8 @@ public class UserController extends BaseController{
     }
     
     @PostMapping
+    @ApiOperation(value="添加用户信息", notes = "添加用户信息")
+    @ApiImplicitParam(name="user", value="User", required = true, dataType = "UserRequest")
     public ResultDTO addUser(@RequestBody @Validated UserRequest user, BindingResult bindingResult) {
     	ResultDTO result = null;
     	if (bindingResult.hasErrors()) {
