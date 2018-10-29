@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.dipont.api.bo.UserBO;
 import com.dipont.common.exception.BaseExceptionEnum;
-import com.dipont.service.user.service.UserService;
+import com.dipont.service.api.UserService;
+import com.dipont.service.bo.UserBO;
 import com.dipont.web.core.BaseController;
 import com.dipont.web.core.NormalResultDTO;
 import com.dipont.web.core.ResultDTO;

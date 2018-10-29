@@ -1,4 +1,4 @@
-package com.dipont.service.user.service.impl;
+package com.dipont.service.user.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,11 +7,11 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.dipont.api.bo.UserBO;
-import com.dipont.api.entity.UserEntity;
 import com.dipont.common.redis.RedisService;
+import com.dipont.service.api.UserService;
+import com.dipont.service.bo.UserBO;
+import com.dipont.service.entity.UserEntity;
 import com.dipont.service.user.dao.UserDao;
-import com.dipont.service.user.service.UserService;
 
 @Service
 public class UserServiceImpl implements UserService {
