@@ -1,6 +1,0 @@
-2018-10-22 16:50:01,258 INFO (StartupInfoLogger.java:50)- Starting DemoWebUserApplication on liyizheng with PID 12864 (D:\Java\Eclipse_WorkSpace\demo-web-user\target\classes started by liyizhen in D:\Java\Eclipse_WorkSpace\demo-web-user)
-2018-10-22 16:50:01,261 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.6.RELEASE, Spring v5.0.10.RELEASE
-2018-10-22 16:50:01,262 INFO (SpringApplication.java:654)- No active profile set, falling back to default profiles: default
-2018-10-22 16:51:10,560 INFO (StartupInfoLogger.java:50)- Starting DemoWebUserApplication on liyizheng with PID 11772 (D:\Java\Eclipse_WorkSpace\demo-web-user\target\classes started by liyizhen in D:\Java\Eclipse_WorkSpace\demo-web-user)
-2018-10-22 16:51:10,565 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.0.6.RELEASE, Spring v5.0.10.RELEASE
-2018-10-22 16:51:10,573 INFO (SpringApplication.java:654)- No active profile set, falling back to default profiles: default
